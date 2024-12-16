@@ -17,6 +17,15 @@ typedef struct HashTable
     int capacity;
 } HashTable;
 
+HashTable *ht_create(int capacity);
+void ht_insert(HashTable *ht, int key, int value);
+bool ht_contains(HashTable *ht, int key);
+int ht_search(HashTable *ht, int key);
+void ht_delete(HashTable *ht, int key);
+void ht_clear(HashTable *ht);
+void ht_destory(HashTable *ht);
+void ht_print(HashTable *ht);
+
 HashTable *ht_create(int capacity)
 {
     HashTable *ht = (HashTable *)malloc(sizeof(HashTable));
